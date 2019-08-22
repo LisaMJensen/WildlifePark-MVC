@@ -1,0 +1,17 @@
+﻿@model IEnumerable<WildlifePark_MVC.Models.Animal>
+
+<h2>All Animals</h2>
+<hr />
+<ol>
+    @foreach (var animal in Model)
+    {
+        <li>
+            <ul>
+                <li>Species: @Html.DisplayFor(modelItem => animal.Species)</li>
+                <li>Name: @Html.DisplayFor(modelItem => animal.Name)</li>
+                <li>Age: @Html.DisplayFor(modelItem => animal.Age)</li>
+                <li>Gender: @Html.DisplayFor(modelItem => animal.Gender)</li>
+            </ul>
+        </li>
+    }
+</ol>
